@@ -16,9 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} relative z-0 bg-[#e0e0e0]`}>
-        {children}
-      </body>
+      <body className={`${inter.className} relative z-0`}>{children}</body>
     </html>
   );
 }
