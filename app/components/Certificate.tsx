@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const FeatureWork = () => {
+const Certificate = () => {
   return (
     <section className="sm:py-12 py-10">
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-8 items-center">
@@ -68,4 +68,4 @@ const FeatureWork = () => {
   );
 };
 
-export default FeatureWork;
+export default Certificate;

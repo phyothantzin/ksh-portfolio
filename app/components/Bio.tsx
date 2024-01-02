@@ -3,7 +3,7 @@ import React from "react";
 
 const Bio = () => {
   return (
-    <section className="lg:py-6">
+    <section className="sm:py-12 py-10">
       <div className="flex flex-col sm:flex-row md:justify-evenly justify-center items-center gap-6">
         <div>
           <Image
