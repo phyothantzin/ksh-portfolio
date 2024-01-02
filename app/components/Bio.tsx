@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-const About = () => {
+const Bio = () => {
   return (
-    <section className="py-8">
+    <section className="lg:py-6">
       <div className="flex flex-col sm:flex-row md:justify-evenly justify-center items-center gap-6">
         <div>
           <Image
@@ -37,4 +37,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Bio;
