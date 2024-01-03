@@ -18,7 +18,7 @@ const Bio = () => {
           variants={imageVariants}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
-          transition={{ duration: 2, type: "easeIn" }}
+          transition={{ duration: 4, type: "easeIn" }}
         >
           <Image
             src="/img/portrait_640.jpg"
@@ -32,14 +32,14 @@ const Bio = () => {
           variants={imageVariants}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
-          transition={{ duration: 2, type: "easeIn" }}
+          transition={{ duration: 4, type: "easeIn" }}
           className="md:mt-20"
         >
           <motion.h2
             variants={textVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 1, delay: 2 }}
+            transition={{ duration: 1, delay: 4 }}
             className="font-serif text-4xl mb-6"
           >
             Bio
@@ -48,7 +48,7 @@ const Bio = () => {
             variants={textVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 1, delay: 2 }}
+            transition={{ duration: 1, delay: 4 }}
             className="text-[#000000e0]"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos eaque

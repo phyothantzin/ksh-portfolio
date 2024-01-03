@@ -19,7 +19,7 @@ const FeaturedWork = () => {
             variants={textVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 1, delay: 2.5 }}
+            transition={{ duration: 1, delay: 3 }}
             className="font-serif text-4xl lg:text-6xl mb-6"
           >
             Featured <br />
@@ -29,7 +29,7 @@ const FeaturedWork = () => {
             variants={textVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 1, delay: 2 }}
+            transition={{ duration: 1, delay: 3 }}
             className="text-[#000000e0] text-base"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
@@ -43,7 +43,7 @@ const FeaturedWork = () => {
             variants={imageVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 2, type: "easeIn" }}
+            transition={{ duration: 4, type: "easeIn" }}
             className="flex flex-col md:flex-row mb-12 md:items-end items-start"
           >
             <Image
@@ -59,7 +59,7 @@ const FeaturedWork = () => {
                 variants={textVariants}
                 initial="initial"
                 animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 1, delay: 3 }}
+                transition={{ duration: 1, delay: 4 }}
                 className="font-serif text-3xl mb-3"
               >
                 Featured <br />
@@ -69,7 +69,7 @@ const FeaturedWork = () => {
                 variants={textVariants}
                 initial="initial"
                 animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 1, delay: 3 }}
+                transition={{ duration: 1, delay: 4 }}
                 className="text-[#000000e0] text-base"
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -80,11 +80,11 @@ const FeaturedWork = () => {
 
           <motion.div
             style={{ alignItems: "flex-end" }}
-            className="flex flex-col md:flex-row"
             variants={imageVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 2, type: "easeIn" }}
+            transition={{ duration: 4, type: "easeIn" }}
+            className="flex flex-col md:flex-row"
           >
             <Image
               src="/img/scenery.jpg"
@@ -99,7 +99,7 @@ const FeaturedWork = () => {
                 variants={textVariants}
                 initial="initial"
                 animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 1, delay: 3 }}
+                transition={{ duration: 1, delay: 4 }}
                 className="font-serif text-3xl mb-3"
               >
                 Featured <br />
@@ -109,7 +109,7 @@ const FeaturedWork = () => {
                 variants={textVariants}
                 initial="initial"
                 animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 1, delay: 3 }}
+                transition={{ duration: 1, delay: 4 }}
                 className="text-[#000000e0] text-base"
               >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
