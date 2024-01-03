@@ -19,7 +19,7 @@ const App = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 2 }}
-        className="lg:min-h-screen min-h-[500px] bg-hero bg-center bg-cover bg-no-repeat bg-center text-white flex flex-col justify-center px-7 sm:px-14"
+        className="lg:min-h-screen min-h-[500px] bg-hero bg-cover bg-no-repeat bg-center text-white flex flex-col justify-center px-7 sm:px-14"
       >
         <motion.h2
           initial={{ translateX: -800 }}
