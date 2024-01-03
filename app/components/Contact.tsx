@@ -1,9 +1,20 @@
-import React from "react";
+"use client";
+import { motion, useInView } from "framer-motion";
+import React, { useRef } from "react";
+import { textVariants } from "../variants";
 
 const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <section className="sm:py-12 py-10 px-8">
-      <div className="flex flex-row flex-wrap justify-between items-center">
+    <section ref={ref} className="sm:py-12 py-10 px-8">
+      <motion.div
+        variants={textVariants}
+        animate={isInView ? "animate" : "initial"}
+        transition={{ duration: 2, type: "easeIn" }}
+        className="flex flex-row flex-wrap justify-between items-center"
+      >
         <div className="flex flex-col">
           <h2 className="font-serif text-4xl mb-3 capitalize">Get in Touch</h2>
           <p className="text-[#000000e0] text-base">
@@ -19,7 +30,7 @@ const Contact = () => {
             Email Me
           </button>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

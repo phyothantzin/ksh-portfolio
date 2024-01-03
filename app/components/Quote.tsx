@@ -13,7 +13,7 @@ const Quote = () => {
   };
 
   return (
-    <section className="">
+    <section className="mt-6">
       <div
         ref={ref}
         className="min-h-screen bg-quote bg-cover bg-no-repeat text-white flex flex-col justify-center px-7 sm:px-14"
