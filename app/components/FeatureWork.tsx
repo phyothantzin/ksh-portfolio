@@ -3,9 +3,9 @@ import React from "react";
 
 const FeatureWork = () => {
   return (
-    <section className="sm:py-12 py-10">
+    <section className="sm:py-12 py-10 px-8">
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-8 items-center">
-        <div className="col-span-3 -mt-40">
+        <div className="col-span-3 md:-mt-40">
           <h2 className="font-serif text-4xl lg:text-6xl mb-6">
             Feature <br />
             Work
@@ -17,10 +17,10 @@ const FeatureWork = () => {
           </p>
         </div>
 
-        <div className="col-span-9 justify-self-end">
+        <div className="col-span-9 md:justify-self-end">
           <div
-            style={{ alignItems: "flex-end" }}
-            className="flex flex-row mb-12"
+            // style={{ alignItems: "flex-end" }}
+            className="flex flex-col md:flex-row mb-12 md:items-end items-start"
           >
             <Image
               src="/img/scenery.jpg"
@@ -30,7 +30,7 @@ const FeatureWork = () => {
               style={{ height: "250px" }}
             />
 
-            <div className="w-[200px] ml-6">
+            <div className="md:w-[200px] md:ml-6 mt-6">
               <h2 className="font-serif text-3xl mb-3">
                 Featured <br />
                 Work
@@ -42,7 +42,10 @@ const FeatureWork = () => {
             </div>
           </div>
 
-          <div style={{ alignItems: "flex-end" }} className="flex flex-row">
+          <div
+            style={{ alignItems: "flex-end" }}
+            className="flex flex-col md:flex-row"
+          >
             <Image
               src="/img/scenery.jpg"
               alt="feature-work"
@@ -51,7 +54,7 @@ const FeatureWork = () => {
               style={{ height: "300px" }}
             />
 
-            <div className="w-[200px] ml-6">
+            <div className="md:w-[200px] md:ml-6 mt-6">
               <h2 className="font-serif text-3xl mb-3">
                 Feature <br />
                 Work
