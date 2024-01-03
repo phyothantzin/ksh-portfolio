@@ -30,7 +30,7 @@ const FeaturedWork = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 1, delay: 3 }}
-            className="text-[#000000e0] text-base"
+            className="text-[#000000e0] text-base mb-6"
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             aspernatur architecto, iste quae similique ullam ducimus saepe
@@ -47,7 +47,7 @@ const FeaturedWork = () => {
             className="flex flex-col md:flex-row mb-12 md:items-end items-start"
           >
             <Image
-              src="/img/scenery.jpg"
+              src="/img/lone-tree.jpg"
               alt="feature-work"
               width={500}
               height={150}
@@ -87,7 +87,7 @@ const FeaturedWork = () => {
             className="flex flex-col md:flex-row"
           >
             <Image
-              src="/img/scenery.jpg"
+              src="/img/cat-1.jpg"
               alt="feature-work"
               width={500}
               height={150}

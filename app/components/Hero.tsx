@@ -1,14 +1,17 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 const App = () => {
   const [animationComplete, setAnimationComplete] = useState(false);
 
   const handleAnimationComplete = () => {
-    // Update the state when the initial animation completes
     setAnimationComplete(true);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <section className="">
@@ -23,7 +26,7 @@ const App = () => {
           animate={
             animationComplete
               ? { translateX: 0, transition: { duration: 4 } }
-              : { translateX: 400, transition: { duration: 4 } }
+              : { translateX: 400, transition: { duration: 4, delay: 2 } }
           }
           onAnimationComplete={handleAnimationComplete}
           className="lg:text-8xl text-6xl font-serif mb-6"
@@ -35,7 +38,7 @@ const App = () => {
           animate={
             animationComplete
               ? { translateX: 0, transition: { duration: 4 } }
-              : { translateX: 650, transition: { duration: 4 } }
+              : { translateX: 650, transition: { duration: 4, delay: 2.5 } }
           }
           onAnimationComplete={handleAnimationComplete}
           className="lg:text-6xl text-4xl font-sans mb-20 lg:mb-40 tracking-tight font-light"
@@ -45,7 +48,7 @@ const App = () => {
         <motion.button
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 4, delay: 4, ease: "easeInOut" }}
+          transition={{ duration: 4, delay: 5, ease: "easeInOut" }}
           className="lg:text-2xl text-sm lg:font-extralight px-6 py-2 mr-auto bg-transparent border lg:border-2 border-white rounded-sm hover:bg-slate-100 hover:text-black transition-all"
         >
           Email Me

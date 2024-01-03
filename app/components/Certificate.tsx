@@ -12,16 +12,13 @@ const Certificate = () => {
     <section className="sm:py-12 py-10 px-8">
       <div ref={ref} className="grid grid-cols-1 sm:grid-cols-12 gap-x-8">
         <div className="col-span-6">
-          <div
-            style={{ alignItems: "flex-start" }}
-            className="flex flex-col mb-12"
-          >
+          <div className="flex flex-col mb-12 items-start">
             <motion.h2
               variants={textVariants}
               initial="initial"
               animate={isInView ? "animate" : "initial"}
               transition={{ duration: 1, delay: 4 }}
-              className="font-serif text-3xl lg:text-6xl mb-6"
+              className="font-serif text-3xl lg:text-6xl lg:mb-6 mb-2"
             >
               My <br />
               Certificates
@@ -47,7 +44,7 @@ const Certificate = () => {
               className="md:ml-16"
             >
               <Image
-                src="/img/scenery.jpg"
+                src="/img/ocean.jpg"
                 alt="feature-work"
                 width={500}
                 height={150}
@@ -89,15 +86,14 @@ const Certificate = () => {
 
         <div className="col-span-6 justify-self-end">
           <motion.div
-            style={{ alignItems: "flex-end" }}
             variants={imageVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 4, type: "easeIn" }}
-            className="flex flex-col"
+            className="flex flex-col items-start lg:items-end"
           >
             <Image
-              src="/img/scenery.jpg"
+              src="/img/sea.jpg"
               alt="feature-work"
               width={500}
               height={150}

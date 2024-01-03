@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       backgroundImage: {
         hero: "url('/img/sunset.jpg')",
+        quote: "url('/img/mountains.jpg')",
+        footer: "url('/img/mountaineer.jpg')",
       },
     },
   },

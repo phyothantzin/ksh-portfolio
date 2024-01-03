@@ -14,9 +14,9 @@ const Quote = () => {
 
   return (
     <section className="">
-      <motion.div
+      <div
         ref={ref}
-        className="min-h-screen bg-hero bg-cover bg-no-repeat bg-center text-white flex flex-col justify-center px-7 sm:px-14"
+        className="min-h-screen bg-quote bg-cover bg-no-repeat text-white flex flex-col justify-center px-7 sm:px-14"
       >
         <motion.h2
           initial={{ translateX: -800 }}
@@ -46,7 +46,7 @@ const Quote = () => {
         >
           - Carson Ellis, Client
         </motion.p>
-      </motion.div>
+      </div>
     </section>
   );
 };
