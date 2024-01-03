@@ -2,7 +2,7 @@ import Bio from "./components/Bio";
 import Certificate from "./components/Certificate";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
-import FeatureWork from "./components/FeatureWork";
+import FeaturedWork from "./components/FeaturedWork";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Quote from "./components/Quote";
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <div className="container mx-auto px-4">
         <Bio />
-        <FeatureWork />
+        <FeaturedWork />
       </div>
       <Quote />
       <div className="container mx-auto px-4">
