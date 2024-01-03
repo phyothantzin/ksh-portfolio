@@ -1,28 +1,62 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { imageVariants, textVariants } from "../variants";
 
 const Bio = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section className="sm:py-12 py-10">
-      <div className="flex flex-col sm:flex-row md:justify-evenly justify-center items-center gap-6">
-        <div>
+      <div
+        ref={ref}
+        className="flex flex-col sm:flex-row md:justify-evenly justify-center items-center gap-6"
+      >
+        <motion.div
+          variants={imageVariants}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          transition={{ duration: 2, type: "easeIn" }}
+        >
           <Image
             src="/img/portrait_640.jpg"
             alt="protrait"
             width={300}
             height={250}
           />
-        </div>
+        </motion.div>
 
-        <div className="md:mt-20">
-          <h2 className="font-serif text-4xl mb-6">Bio</h2>
-          <p className="text-[#000000e0]">
+        <motion.div
+          variants={imageVariants}
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          transition={{ duration: 2, type: "easeIn" }}
+          className="md:mt-20"
+        >
+          <motion.h2
+            variants={textVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 1, delay: 2 }}
+            className="font-serif text-4xl mb-6"
+          >
+            Bio
+          </motion.h2>
+          <motion.p
+            variants={textVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 1, delay: 2 }}
+            className="text-[#000000e0]"
+          >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos eaque
             eius
             <br />
             expedita quo necessitatibus maiores cumque odit deserunt omnis,
             sequi similique?
-          </p>
+          </motion.p>
 
           <Image
             src="/img/scenery.jpg"
@@ -31,7 +65,7 @@ const Bio = () => {
             height={300}
             className="md:pl-20 md:pt-20"
           />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

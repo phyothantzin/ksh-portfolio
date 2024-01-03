@@ -1,10 +1,19 @@
+"use client";
+import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
+import { imageVariants } from "../variants";
 
 const FeatureWork = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section className="sm:py-12 py-10 px-8">
-      <div className="grid grid-cols-1 sm:grid-cols-12 gap-x-8 items-center">
+      <div
+        ref={ref}
+        className="grid grid-cols-1 sm:grid-cols-12 gap-x-8 items-center"
+      >
         <div className="col-span-3 md:-mt-40">
           <h2 className="font-serif text-4xl lg:text-6xl mb-6">
             Feature <br />
@@ -18,8 +27,11 @@ const FeatureWork = () => {
         </div>
 
         <div className="col-span-9 md:justify-self-end">
-          <div
-            // style={{ alignItems: "flex-end" }}
+          <motion.div
+            variants={imageVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 2, type: "easeIn" }}
             className="flex flex-col md:flex-row mb-12 md:items-end items-start"
           >
             <Image
@@ -40,11 +52,15 @@ const FeatureWork = () => {
                 Eligendi aspernatur architecto, iste
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          <div
+          <motion.div
             style={{ alignItems: "flex-end" }}
             className="flex flex-col md:flex-row"
+            variants={imageVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 2, type: "easeIn" }}
           >
             <Image
               src="/img/scenery.jpg"
@@ -64,7 +80,7 @@ const FeatureWork = () => {
                 Eligendi aspernatur
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
