@@ -26,12 +26,12 @@ const Quote = () => {
               : { translateX: 400, transition: { duration: 4 } }
           }
           onAnimationComplete={handleAnimationComplete}
-          className="lg:text-5xl text-2xl font-serif w-[550px]"
+          className="lg:text-5xl text-2xl font-serif w-[300px] lg:w-[550px]"
           style={{ lineHeight: 1.35 }}
         >
           &quot;Kian&apos;s work is simply exceptional.
           <br />
-          They have an amazing eye fordetail, as well as thebig picture.&quot;
+          They have an amazing eye for detail, as well as the big picture.&quot;
         </motion.h2>
 
         <motion.p
