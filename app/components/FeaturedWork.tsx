@@ -2,9 +2,9 @@
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import React, { useRef } from "react";
-import { imageVariants } from "../variants";
+import { imageVariants, textVariants } from "../variants";
 
-const FeatureWork = () => {
+const FeaturedWork = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -15,15 +15,27 @@ const FeatureWork = () => {
         className="grid grid-cols-1 sm:grid-cols-12 gap-x-8 items-center"
       >
         <div className="col-span-3 md:-mt-40">
-          <h2 className="font-serif text-4xl lg:text-6xl mb-6">
-            Feature <br />
+          <motion.h2
+            variants={textVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 1, delay: 2.5 }}
+            className="font-serif text-4xl lg:text-6xl mb-6"
+          >
+            Featured <br />
             Work
-          </h2>
-          <p className="text-[#000000e0] text-base">
+          </motion.h2>
+          <motion.p
+            variants={textVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 1, delay: 2 }}
+            className="text-[#000000e0] text-base"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             aspernatur architecto, iste quae similique ullam ducimus saepe
             magnam quod error.
-          </p>
+          </motion.p>
         </div>
 
         <div className="col-span-9 md:justify-self-end">
@@ -43,14 +55,26 @@ const FeatureWork = () => {
             />
 
             <div className="md:w-[200px] md:ml-6 mt-6">
-              <h2 className="font-serif text-3xl mb-3">
+              <motion.h2
+                variants={textVariants}
+                initial="initial"
+                animate={isInView ? "animate" : "initial"}
+                transition={{ duration: 1, delay: 3 }}
+                className="font-serif text-3xl mb-3"
+              >
                 Featured <br />
                 Work
-              </h2>
-              <p className="text-[#000000e0] text-base">
+              </motion.h2>
+              <motion.p
+                variants={textVariants}
+                initial="initial"
+                animate={isInView ? "animate" : "initial"}
+                transition={{ duration: 1, delay: 3 }}
+                className="text-[#000000e0] text-base"
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Eligendi aspernatur architecto, iste
-              </p>
+              </motion.p>
             </div>
           </motion.div>
 
@@ -71,14 +95,26 @@ const FeatureWork = () => {
             />
 
             <div className="md:w-[200px] md:ml-6 mt-6">
-              <h2 className="font-serif text-3xl mb-3">
-                Feature <br />
+              <motion.h2
+                variants={textVariants}
+                initial="initial"
+                animate={isInView ? "animate" : "initial"}
+                transition={{ duration: 1, delay: 3 }}
+                className="font-serif text-3xl mb-3"
+              >
+                Featured <br />
                 Work
-              </h2>
-              <p className="text-[#000000e0] text-base">
+              </motion.h2>
+              <motion.p
+                variants={textVariants}
+                initial="initial"
+                animate={isInView ? "animate" : "initial"}
+                transition={{ duration: 1, delay: 3 }}
+                className="text-[#000000e0] text-base"
+              >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Eligendi aspernatur
-              </p>
+                Eligendi aspernatur architecto, iste
+              </motion.p>
             </div>
           </motion.div>
         </div>
@@ -87,4 +123,4 @@ const FeatureWork = () => {
   );
 };
 
-export default FeatureWork;
+export default FeaturedWork;
