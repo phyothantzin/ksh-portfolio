@@ -9,7 +9,7 @@ import Quote from "./components/Quote";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col overflow-hidden">
       <Hero />
       <div className="container mx-auto px-4">
         <Bio />

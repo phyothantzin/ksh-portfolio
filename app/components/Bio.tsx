@@ -49,7 +49,7 @@ const Bio = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 1, delay: 4 }}
-            className="text-[#000000e0] text-base mb-6"
+            className="text-[#000000e0] text-[1rem] mb-6"
           >
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos eaque
             eius
