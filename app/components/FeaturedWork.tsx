@@ -12,7 +12,7 @@ const FeaturedWork = () => {
     <section className="sm:py-12 py-10 px-8">
       <div
         ref={ref}
-        className="grid grid-cols-1 sm:grid-cols-12 gap-x-8 items-center"
+        className="grid grid-cols-1 sm:grid-cols-12 lg:gap-x-8 items-center"
       >
         <div className="col-span-3 md:-mt-40">
           <motion.h2
@@ -30,7 +30,7 @@ const FeaturedWork = () => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 1, delay: 3 }}
-            className="text-[#000000e0] text-base mb-6"
+            className="text-[#000000e0] text-base mb-6 "
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
             aspernatur architecto, iste quae similique ullam ducimus saepe
