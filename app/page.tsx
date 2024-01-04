@@ -14,13 +14,14 @@ export default function Home() {
       <div className="container mx-auto px-4">
         <Bio />
         <FeaturedWork />
-      </div>
-      <Quote />
-      <div className="container mx-auto px-4">
-        <Certificate />
         <Education />
         <Contact />
       </div>
+      {/* <Quote /> */}
+      {/* <div className="container mx-auto px-4">
+        <Certificate />
+      </div>
+      */}
       <Footer />
     </main>
   );

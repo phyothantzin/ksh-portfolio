@@ -12,13 +12,14 @@ const Bio = () => {
     <section className="sm:py-12 py-10">
       <div
         ref={ref}
-        className="flex flex-col sm:flex-row md:justify-evenly justify-center items-center gap-6"
+        className="grid grid-cols-1 sm:grid-cols-12 sm:justify-evenly justify-center items-center justify-items-center gap-6"
       >
         <motion.div
           variants={imageVariants}
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           transition={{ duration: 4, type: "easeIn" }}
+          className="col-span-6"
         >
           <Image
             src="/img/portrait_640.jpg"
@@ -33,7 +34,7 @@ const Bio = () => {
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           transition={{ duration: 4, type: "easeIn" }}
-          className="md:mt-20"
+          className="col-span-6 justify-self-start px-8 lg:px-0"
         >
           <motion.h2
             variants={textVariants}
@@ -51,20 +52,21 @@ const Bio = () => {
             transition={{ duration: 1, delay: 4 }}
             className="text-[#000000e0] text-[1rem] mb-6"
           >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos eaque
-            eius
-            <br />
-            expedita quo necessitatibus maiores cumque odit deserunt omnis,
-            sequi similique?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ipsam
+            quidem odio quos cumque veritatis exercitationem assumenda
+            voluptatum saepe maiores repudiandae totam, explicabo aut impedit
+            laudantium fuga nesciunt expedita odit? Eveniet dolorum consequuntur
+            impedit nemo ipsa ratione, earum, amet quas error laudantium, modi
+            odit? Recusandae corrupti soluta consequatur velit harum?
           </motion.p>
 
-          <Image
+          {/* <Image
             src="/img/scenery.jpg"
             alt="scenery"
             width={600}
             height={300}
             className="md:pl-20 md:pt-20"
-          />
+          /> */}
         </motion.div>
       </div>
     </section>
