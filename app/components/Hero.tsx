@@ -19,14 +19,14 @@ const App = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 2 }}
-        className="lg:min-h-screen min-h-[500px] bg-hero bg-cover bg-no-repeat bg-center text-white flex flex-col justify-center px-7 sm:px-14"
+        className="lg:min-h-screen min-h-[400px] bg-hero bg-cover bg-no-repeat bg-center text-white flex flex-col justify-center px-7 sm:px-14"
       >
         <motion.h2
           initial={{ translateX: -800 }}
           animate={
             animationComplete
               ? { translateX: 0, transition: { duration: 4 } }
-              : { translateX: 400, transition: { duration: 4, delay: 2 } }
+              : { translateX: 90, transition: { duration: 4, delay: 2 } }
           }
           onAnimationComplete={handleAnimationComplete}
           className="lg:text-8xl text-6xl font-serif mb-6"
@@ -38,7 +38,7 @@ const App = () => {
           animate={
             animationComplete
               ? { translateX: 0, transition: { duration: 4 } }
-              : { translateX: 650, transition: { duration: 4, delay: 2.5 } }
+              : { translateX: 280, transition: { duration: 4, delay: 2.5 } }
           }
           onAnimationComplete={handleAnimationComplete}
           className="lg:text-6xl text-4xl font-sans mb-20 lg:mb-40 tracking-tight font-light"
