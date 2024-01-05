@@ -20,19 +20,18 @@ const navLinks = [
   },
 ];
 
-const Navbar = ({
-  visibleDefault,
-  fixed = true,
-}: {
+interface Props {
   visibleDefault: boolean;
-  fixed: boolean;
-}) => {
+  fixed?: boolean;
+}
+
+const Navbar = ({ visibleDefault, fixed = true }: Props) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(visibleDefault || false);
 
   useEffect(() => {
-    if (!fixed) {
+    if (fixed === true) {
       const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
 
@@ -47,8 +46,6 @@ const Navbar = ({
         window.removeEventListener("scroll", handleScroll);
       };
     }
-
-    return;
   }, [fixed, prevScrollPos, visible]);
 
   return (
@@ -57,7 +54,7 @@ const Navbar = ({
         className={`${
           fixed ? "fixed" : "sticky"
         } mx-auto border-b border-[#33353F] text-black top-0 left-0 right-0 z-10 bg-[#fffafaec] bg-opacity-100 transition-all duration-300 ${
-          visible && !fixed ? "bg-opacity-100" : "bg-opacity-0 -translate-y-full"
+          visible ? "bg-opacity-100" : "bg-opacity-0 -translate-y-full"
         }`}
       >
         <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
