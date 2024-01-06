@@ -1,4 +1,5 @@
 import Contact from "@/app/components/Contact";
+import ContactForm from "@/app/components/ContactForm";
 import Footer from "@/app/components/Footer";
 import Navbar from "@/app/components/nav/Navbar";
 import React from "react";
@@ -8,7 +9,7 @@ const Page = () => {
     <>
       <Navbar visibleDefault={true} fixed={false} />
       <div>
-        <Contact />
+        <ContactForm />
       </div>
       <Footer />
     </>

@@ -8,4 +8,23 @@ const textVariants = {
   animate: { opacity: 1 },
 };
 
-export { imageVariants, textVariants };
+const slideIn = (direction: string, type: any, delay: any, duration: any) => {
+  return {
+    hidden: {
+      x: direction === "left" ? "-100%" : direction === "right" ? "100%" : 0,
+      y: direction === "up" ? "100%" : direction === "down" ? "100%" : 0,
+    },
+    show: {
+      x: 0,
+      y: 0,
+      transition: {
+        type: type,
+        delay: delay,
+        duration: duration,
+        ease: "easeOut",
+      },
+    },
+  };
+};
+
+export { imageVariants, textVariants, slideIn };
