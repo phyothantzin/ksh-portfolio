@@ -4,6 +4,7 @@ import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { imageVariants, textVariants } from "../variants";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import Info from "./Info";
 
 interface Props {
   aboutPage?: boolean;
@@ -39,7 +40,7 @@ const Bio = ({ aboutPage = false }: Props) => {
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           transition={{ duration: 4, type: "easeIn" }}
-          className="col-span-7 justify-self-start lg:px-8 px-0 mt-8 lg:mt-0"
+          className="col-span-7 justify-self-start lg:px-8 px-4 sm:px-2 mt-8 lg:mt-0 lg:max-w-[calc(100% - 32px)] max-w-full"
         >
           <motion.h2
             variants={textVariants}
@@ -55,9 +56,7 @@ const Bio = ({ aboutPage = false }: Props) => {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 1, delay: 4 }}
-            className={`text-[#000000e0] text-[1rem] mb-6 ${
-              aboutPage && "lg:w-[600px] w-[460px]"
-            }`}
+            className={`text-[#000000e0] text-[1rem] mb-6 lg:w-3/4 xl:w-2/3`}
           >
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad ipsam
             quidem odio quos cumque veritatis exercitationem assumenda
@@ -113,46 +112,11 @@ const Bio = ({ aboutPage = false }: Props) => {
 
       {aboutPage && (
         <>
-          <div className="flex pt-12 pb-6 justify-start">
-            <motion.div>
-              <motion.h2
-                variants={textVariants}
-                initial="initial"
-                animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 1 }}
-                className="font-serif text-4xl mb-6"
-              >
-                Experiences
-              </motion.h2>
-              <motion.ul
-                variants={textVariants}
-                initial="initial"
-                animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 1, delay: 5 }}
-                className="list-disc ml-4"
-              >
-                <li className="text-[#000000e0] text-[1rem] mb-4">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Quidem blanditiis dolorum accusantium, unde corporis odit
-                  reprehenderit quisquam quo possimus? Culpa?
-                </li>
-                <li className="text-[#000000e0] text-[1rem] mb-4">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Quidem blanditiis dolorum accusantium, unde corporis odit
-                  reprehenderit quisquam quo possimus? Culpa?
-                </li>
-                <li className="text-[#000000e0] text-[1rem] mb-4">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Quidem blanditiis dolorum accusantium, unde corporis odit
-                  reprehenderit quisquam quo possimus? Culpa?
-                </li>
-                <li className="text-[#000000e0] text-[1rem] mb-4">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Quidem blanditiis dolorum accusantium, unde corporis odit
-                  reprehenderit quisquam quo possimus? Culpa?
-                </li>
-              </motion.ul>
-            </motion.div>
+          <div className="flex flex-col gap-8 pt-12 pb-6 justify-start">
+            <Info title="Education" />
+            <Info title="Skills" />
+            <Info title="Experience" />
+            <Info title="Hobbies" />
           </div>
         </>
       )}

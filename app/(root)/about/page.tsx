@@ -6,7 +6,7 @@ const Page = () => {
   return (
     <>
       <Navbar visibleDefault={true} fixed={false} />
-      <section className="sm:py-12 py-10 px-6">
+      <section className="sm:py-12 py-10 px-6 overflow-x-hidden">
         <Bio aboutPage={true} />
       </section>
     </>
