@@ -65,7 +65,9 @@ const ContactForm = () => {
       <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
         <motion.div className="flex-[0.75] bg-black-100 p-8 rounded-2xl">
           <p className="text-[#000000e0] text-base">Get in touch</p>
-          <h3 className="font-serif text-4xl mb-3 capitalize">Contact.</h3>
+          <h3 className="font-serif text-4xl lg:text-6xl mb-3 capitalize">
+            Contact.
+          </h3>
 
           <form
             ref={formRef}

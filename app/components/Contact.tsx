@@ -2,6 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
 import { textVariants } from "../variants";
+import Link from "next/link";
 
 const Contact = () => {
   const ref = useRef(null);
@@ -26,9 +27,12 @@ const Contact = () => {
         </div>
 
         <div className="mt-6 md:mt-0">
-          <button className="lg:text-2xl text-sm lg:font-light px-6 py-2 mr-auto bg-transparent border lg:border-2 border-slate-900 rounded-sm hover:bg-slate-900 hover:text-white transition-all">
+          <Link
+            href="/contact"
+            className="lg:text-2xl text-sm lg:font-light px-6 py-2 mr-auto bg-transparent border lg:border-2 border-slate-900 rounded-sm hover:bg-slate-900 hover:text-white transition-all"
+          >
             Email Me
-          </button>
+          </Link>
         </div>
       </motion.div>
     </section>
