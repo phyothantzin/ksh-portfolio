@@ -52,16 +52,12 @@ const App = () => {
               className="lg:min-h-screen min-h-[400px] bg-cover bg-no-repeat bg-center text-white flex flex-col justify-center px-7 sm:px-14"
             >
               <motion.h2
-                initial={{ opacity: 0 }}
-                animate={
-                  animationComplete
-                    ? { opacity: 1, translateX: 0, transition: { duration: 4 } }
-                    : {
-                        opacity: 0.8,
-                        translateX: 90,
-                        transition: { duration: 4, delay: 2 },
-                      }
-                }
+                initial={{ opacity: 0, translateX: 400 }}
+                animate={{
+                  opacity: 1,
+                  translateX: 0,
+                  transition: { duration: 5, delay: 2 },
+                }}
                 onAnimationComplete={handleAnimationComplete}
                 transition={{ duration: 4, delay: 2, ease: "easeInOut" }}
                 className="lg:text-8xl text-6xl font-serif mb-6"
@@ -69,16 +65,12 @@ const App = () => {
                 Kyal Sin Hein
               </motion.h2>
               <motion.h4
-                initial={{ opacity: 0 }}
-                animate={
-                  animationComplete
-                    ? { opacity: 1, translateX: 0, transition: { duration: 4 } }
-                    : {
-                        opacity: 0.8,
-                        translateX: 280,
-                        transition: { duration: 4, delay: 2 },
-                      }
-                }
+                initial={{ opacity: 0, translateX: 600 }}
+                animate={{
+                  opacity: 1,
+                  translateX: 0,
+                  transition: { duration: 5, delay: 2.5 },
+                }}
                 onAnimationComplete={handleAnimationComplete}
                 transition={{ duration: 4, delay: 2.5, ease: "easeInOut" }}
                 className="lg:text-6xl text-4xl font-sans mb-20 lg:mb-40 tracking-tight font-light"
