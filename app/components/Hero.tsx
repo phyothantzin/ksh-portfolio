@@ -23,6 +23,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const interval = setInterval(() => {
       setAnimationComplete(false);
     }, 10000);

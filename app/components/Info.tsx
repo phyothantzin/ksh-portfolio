@@ -14,7 +14,7 @@ const Info = ({ title }: Props) => {
           variants={textVariants}
           initial="initial"
           animate="animate"
-          transition={{ duration: 1 }}
+          transition={{ duration: 1, delay: 4 }}
           className="font-serif text-4xl mb-6"
         >
           {title}

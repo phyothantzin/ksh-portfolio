@@ -11,3 +11,11 @@
 body {
   background-color: snow;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: snow !important;
+}

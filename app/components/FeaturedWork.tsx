@@ -12,7 +12,7 @@ const FeaturedWork = () => {
     <section className="sm:py-12 py-10 px-8">
       <div
         ref={ref}
-        className="grid grid-cols-1 sm:grid-cols-12 md:gap-x-8 items-center"
+        className="grid grid-cols-1 sm:grid-cols-12 lg:gap-x-8 items-center"
       >
         <div className="col-span-3 md:-mt-40">
           <motion.h2
@@ -91,6 +91,7 @@ const FeaturedWork = () => {
               alt="feature-work"
               width={500}
               height={150}
+              style={{ height: "300px" }}
             />
 
             <div className="md:w-[200px] md:ml-6 mt-6">

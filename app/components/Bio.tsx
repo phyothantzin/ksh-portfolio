@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { imageVariants, textVariants } from "../variants";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import Info from "./Info";
@@ -11,13 +11,19 @@ interface Props {
 }
 
 const Bio = ({ aboutPage = false }: Props) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
     <section className="sm:py-12 py-10 lg:px-20">
-      <div className="grid grid-cols-1 sm:grid-cols-12 sm:justify-evenly justify-center items-center justify-items-center lg:gap-x-6">
+      <div
+        ref={ref}
+        className="grid grid-cols-1 sm:grid-cols-12 sm:justify-evenly justify-center items-center justify-items-center lg:gap-x-6"
+      >
         <motion.div
           variants={imageVariants}
           initial="initial"
-          whileInView="animate"
+          animate={isInView ? "animate" : "initial"}
           transition={{ duration: 4, type: "easeIn" }}
           className="col-span-5"
         >
@@ -32,14 +38,14 @@ const Bio = ({ aboutPage = false }: Props) => {
         <motion.div
           variants={imageVariants}
           initial="initial"
-          whileInView="animate"
+          animate={isInView ? "animate" : "initial"}
           transition={{ duration: 4, type: "easeIn" }}
           className="col-span-7 justify-self-start lg:px-8 px-4 sm:px-2 mt-8 lg:mt-0 lg:max-w-[calc(100% - 32px)] max-w-full"
         >
           <motion.h2
             variants={textVariants}
             initial="initial"
-            whileInView="animate"
+            animate={isInView ? "animate" : "initial"}
             transition={{ duration: 1, delay: 4 }}
             className="font-serif text-4xl mb-6"
           >
@@ -48,7 +54,7 @@ const Bio = ({ aboutPage = false }: Props) => {
           <motion.p
             variants={textVariants}
             initial="initial"
-            whileInView="animate"
+            animate={isInView ? "animate" : "initial"}
             transition={{ duration: 1, delay: 4 }}
             className={`text-[#000000e0] text-[1rem] mb-6 lg:w-3/4 xl:w-2/3`}
           >
@@ -65,13 +71,13 @@ const Bio = ({ aboutPage = false }: Props) => {
               <motion.div
                 variants={textVariants}
                 initial="initial"
-                whileInView="animate"
+                animate={isInView ? "animate" : "initial"}
                 transition={{ duration: 1, delay: 5 }}
               >
                 <motion.p
                   variants={textVariants}
                   initial="initial"
-                  whileInView="animate"
+                  animate={isInView ? "animate" : "initial"}
                   transition={{ duration: 1 }}
                   className="text-[#000000e0] text-[1rem] mb-6 w-[600px] flex gap-2 items-center"
                 >
@@ -81,7 +87,7 @@ const Bio = ({ aboutPage = false }: Props) => {
                 <motion.p
                   variants={textVariants}
                   initial="initial"
-                  whileInView="animate"
+                  animate={isInView ? "animate" : "initial"}
                   transition={{ duration: 1 }}
                   className="text-[#000000e0] text-[1rem] mb-6 w-[600px] flex gap-2 items-center"
                 >
@@ -91,7 +97,7 @@ const Bio = ({ aboutPage = false }: Props) => {
                 <motion.p
                   variants={textVariants}
                   initial="initial"
-                  whileInView="animate"
+                  animate={isInView ? "animate" : "initial"}
                   transition={{ duration: 1 }}
                   className="text-[#000000e0] text-[1rem] mb-6 w-[600px] flex gap-2 items-center"
                 >
